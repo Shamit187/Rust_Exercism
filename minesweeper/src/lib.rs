@@ -1,5 +1,6 @@
-use itertools::iproduct;
+// use itertools::iproduct;
 
+/*
 fn count_star_around(minefield: &Vec<Vec<char>>, row: usize, col: usize) ->  char {
     let dimension_row = minefield.len();
     let dimension_col = minefield[0].len();
@@ -36,12 +37,15 @@ fn count_star_around(minefield: &Vec<Vec<char>>, row: usize, col: usize) ->  cha
     if count == 0 {
         ' '
     }else {
-        ('0' as u8 + count) as char 
+        ('0' as u8 + count) as char
     }
 
 }
 
+*/
+
 pub fn annotate(minefield: &[&str]) -> Vec<String> {
+    /*
     let dimension_row = minefield.len();
     if dimension_row == 0{
         return vec![];
@@ -61,4 +65,31 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
         .iter()
         .map(|x| x.iter().collect::<String>())
         .collect()
+    */
+
+    const MINE_OFFSET: &[(i32, i32)] = &[
+        (-1, -1), (-1, 0), (-1, 1),
+        ( 0, -1),          ( 0, 1),
+        ( 1, -1), ( 1, 0), ( 1, 1),
+    ];
+
+    let height = minefield.len() as i32;
+
+    (0..height).map(|row|{
+        let width = minefield[row as usize].len() as i32;
+        (0..width).map(|col|{
+            if minefield[row as usize].as_bytes()[col as usize] == b'*'{
+                '*'
+            }else{
+                match MINE_OFFSET.iter()
+                    .map(|&(offset_row, offset_col)| (offset_row + row, offset_col+ col))
+                    .filter(|&(x, y)| (x >= 0 && x < height) && (y >= 0 && y < width))
+                    .filter(|&(x, y)| minefield[x as usize].as_bytes()[y as usize] == b'*')
+                    .count() {
+                        0 => ' ',
+                        n => ('0' as  u8 + n as u8) as char
+                    }
+            }
+        }).collect()
+    }).collect()
 }
