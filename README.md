@@ -1,14 +1,14 @@
-## Exercism Rust Track Readme
+# Exercism Rust Track Readme
 
 Welcome to the Exercism Rust track! This README.md file will guide you through getting started with solving exercises on Exercism using Rust.
 
-### Installing Rust Locally
+## Installing Rust Locally
 
 To solve exercises locally, you'll need to have Rust installed on your machine. Follow the [official Rust installation instructions](https://www.rust-lang.org/tools/install) for your platform.
 
 IDE support can significantly enhance your productivity. If you're using Visual Studio Code, check out its documentation for Rust support. We also recommend enabling linting with Clippy for better code quality.
 
-### Learning Rust
+## Learning Rust
 
 If you're new to Rust, here are some resources to help you get started:
 
@@ -18,7 +18,7 @@ If you're new to Rust, here are some resources to help you get started:
 - [Rustlings](https://github.com/rust-lang/rustlings) provides small exercises to familiarize yourself with Rust syntax and concepts.
 - The [Rust User Forum](https://users.rust-lang.org/) is a great place to ask questions and learn from others.
 
-### Getting Started with Exercism
+## Getting Started with Exercism
 
 Here's how to start solving exercises on Exercism:
 
@@ -27,15 +27,16 @@ Here's how to start solving exercises on Exercism:
 3. Complete exercises to unlock more challenges and improve your fluency in the language.
 4. Request help from mentors if you get stuck on an exercise.
 
-### Mentoring Students
+## Mentoring Students
 
 Interested in mentoring others? Mentoring is a rewarding way to reinforce your own learning while helping others improve their skills. Check out the [mentoring page](https://exercism.org/become-a-mentor) for instructions on becoming a mentor.
 
-### Building Exercism
+## Building Exercism
 
 Exercism is an open-source project, and we welcome contributions from all backgrounds. If you'd like to help build Exercism, check out the [contributing page](https://github.com/exercism/docs/blob/main/CONTRIBUTING.md) for tasks you can work on.
 
-### Working Locally
+---
+# Working Locally
 
 Here's how to solve exercises on your local machine:
 
@@ -49,13 +50,13 @@ For troubleshooting and more CLI functionality, refer to the relevant sections i
 
 If you encounter any issues, feel free to open an issue on the [exercism/cli](https://github.com/exercism/cli) repository or seek help from the community. Make sure to check the [Interactive Walkthrough](https://exercism.org/tracks/rust/troubleshooting) before opening any issues.
 
-### Install Exercism
+## Install Exercism
 
-#### Download the Archive
+### Download the Archive
 
 If you know your processor architecture (x86 (32-bit) vs x86_64 (64-bit) vs ARM), download the appropriate archive from the [releases page](https://github.com/exercism/cli/releases).
 
-#### Extract from the Archive
+### Extract from the Archive
 
 Once you have the archive downloaded you need to extract the executable from it.
 
@@ -67,7 +68,7 @@ Once you have the archive downloaded you need to extract the executable from it.
     tar -xf exercism-linux-64bit.tgz
     ```
 
-#### Moving the Executable to ~/bin
+### Moving the Executable to ~/bin
 
 Once you download and extract the archive, make it available in your $PATH.
 
@@ -100,7 +101,7 @@ Usage:
    [command]
 ```
 
-#### Adding ~/bin to $PATH in Bash
+### Adding ~/bin to $PATH in Bash
 
 Note: If you’re not running Bash try to adjust the below to your shell or Talk to a Volunteer.
 
@@ -136,7 +137,7 @@ Usage:
    [command]
 ```
 
-#### Configuring the CLI
+### Configuring the CLI
 
 In order to configure the CLI, paste in the following text into your terminal:
 
